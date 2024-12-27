@@ -1,0 +1,124 @@
+
+
+/* ----------------------------------------------------------------
+			[ All Css Plugins & Helper Classes File ]
+-----------------------------------------------------------------*/
+
+/* == bootstrap == */
+@import url("plugins/bootstrap.min.css");
+
+/* == animate css == */
+@import url("plugins/animate.min.css");
+
+/* == ionicons icon font == */
+@import url("plugins/themify-icons.css");
+
+/* == pe-icon-7-stroke == */
+@import url("plugins/pe-icon-7-stroke.css");
+
+/* == fontawesome icon font == */
+@import url("plugins/fontawesome-all.min.css");
+
+/* == justifiedGallery.min == */
+@import url("plugins/justifiedGallery.min.css");
+
+/* == magnific-popup == */
+@import url("plugins/magnific-popup.css");
+
+/* == YouTubePopUp == */
+@import url("plugins/YouTubePopUp.css");
+
+/* == swiper.min font == */
+@import url("plugins/swiper.min.css");
+
+
+
+
+// Function to detect mobile devices
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+// Only apply the following code if not on a mobile device
+if (!isMobileDevice()) {
+
+    // Function to show a warning message
+    function showWarning() {
+        var warningMessage = document.getElementById('warningMessage');
+        if (warningMessage) {
+            warningMessage.style.display = 'block';
+            setTimeout(function() {
+                warningMessage.style.display = 'none';
+            }, 3000);
+        } else {
+            alert('Action disabled.');
+        }
+    }
+
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    });
+
+    // Disable specific key presses
+    document.addEventListener('keydown', function(event) {
+        var forbiddenKeys = ['PrintScreen', 'F12', 'Control+P', 'Control+Shift+I', 'Control+Shift+C', 'Control+Shift+J'];
+        
+        if (forbiddenKeys.includes(event.key) || 
+            (event.ctrlKey && event.key === 'p') || 
+            (event.ctrlKey && event.shiftKey && ['I', 'C', 'J'].includes(event.key)) ||
+            (event.key === 's' && event.shiftKey && event.metaKey)) {
+            event.preventDefault();
+            event.stopPropagation();
+            showWarning();
+        }
+    });
+
+    // Attempt to block PrintScreen by clearing the clipboard
+    document.addEventListener('keyup', function(event) {
+        if (event.key === 'PrintScreen') {
+            navigator.clipboard.writeText('');
+            showWarning();
+        }
+    });
+
+    // Additional method to disrupt screenshot functionality
+    setInterval(function() {
+        var textArea = document.createElement("textarea");
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        textArea.style.pointerEvents = 'none';
+        textArea.style.zIndex = '-1';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+    }, 100);
+
+    // Disabling Windows + Shift + S (this may not be foolproof)
+    window.addEventListener('keydown', function(event) {
+        if (event.key === 's' && event.shiftKey && event.metaKey) {
+            event.preventDefault();
+            showWarning();
+        }
+    });
+
+    // Disable Ctrl+U and other key combinations
+    document.addEventListener('keydown', function(event) {
+        if ((event.ctrlKey && event.key.toLowerCase() === 'u') ||   // Ctrl+U or Ctrl+Shift+U
+            (event.metaKey && event.key.toLowerCase() === 'u')) {   // Cmd+U or Cmd+Shift+U on macOS
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    });
+
+    // Prevent default action on key up to ensure strictness
+    document.addEventListener('keyup', function(event) {
+        if ((event.ctrlKey && event.key.toLowerCase() === 'u') || 
+            (event.metaKey && event.key.toLowerCase() === 'u')) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    });
+}
