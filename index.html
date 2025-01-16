@@ -33,9 +33,80 @@
     <!-- Core Style Css -->
     <link rel="stylesheet" href="common/css/common_style.css" />
     <link rel="stylesheet" href="assets/css/home7-style.css" />
+
+    <style>
+      .floating-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 120px;
+        z-index: 1050; /* Ensures it appears above other elements */
+        /* background-color: #007bff; Bootstrap primary color */
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 1%;
+      }
+
+      .hu__hu__ {
+        animation: hu__hu__ infinite 2s ease-in-out;
+      }
+      @keyframes hu__hu__ {
+        50% {
+          transform: translateY(20px);
+        }
+      }
+    </style>
   </head>
 
   <body>
+    >
+    <div
+      class="floating-icon cssanimation hu__hu__"
+      type="button"
+      class=""
+      data-bs-toggle="modal"
+      data-bs-target="#myModal"
+    >
+      <img src="assets\imgs\ai.png" />
+    </div>
+    <!-- Bootstrap Icon -->
+
+    <div class="modal modal-centered modal-scrollable fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">Modal body..</div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ==================== Start Loading ==================== -->
 
     <div class="loader-wrap">
@@ -80,9 +151,9 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <!-- Logo -->
-        <a class="logo" href="#">
-          <img src="" alt="logo" />
-        </a>
+        <!-- <a class="logo" href="#">
+          <img src="assets/imgs/logo.png" alt="logo" />
+        </a> -->
 
         <!-- navbar links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -139,19 +210,32 @@
             <div class="container-xl position-re">
               <div class="row">
                 <div class="col-lg-9">
-                  <div class="caption">
-                    <h1>
+                  <div class="caption" style="margin-top: -55px">
+                    <span></span>
+                    <h1 style="font-size: 7rem">
+                      <!-- <img src="assets/imgs/logo.png" /> -->
                       <span
                         style="
                           color: #ffc346;
                           font-weight: 800;
-                          letter-spacing: 3px;
+                          letter-spacing: 5px;
                         "
-                        >Syndicate UP</span
-                      >
+                        >Syndicate
+                      </span>
                       <br />
-                      Pitch Deck
                     </h1>
+                    <h6 class="mt-20" style="letter-spacing: 2px">
+                      Connecting people, creating businesses
+                    </h6>
+
+                    <div class="play-button">
+                      <a href="https://youtu.be/AzwC6umvd1s" class="vid">
+                        <i class="fas fa-play">button</i>
+                      </a>
+                    </div>
+                    <div>
+                      <!-- Modal Structure -->
+                    </div>
                   </div>
                   <div class="row md-hide">
                     <div class="col-lg-6 imgs-cube">
@@ -200,15 +284,25 @@
                   </div>
                 </div>
                 <img src="assets/imgs/header/2.jpg" alt="" />
+
                 <div class="text">
-                  <span class="fz-12 text-u mb-10"
+                  <a href="">
+                    <img src="assets/imgs/google-play.png" / style="width:
+                    160px;"></a
+                  >
+                  <a href="">
+                    <img src="assets/imgs/app-store.png" / style="width:
+                    160px;">
+                  </a>
+
+                  <!-- <span class="fz-12 text-u mb-10"
                     >Since <br />
                     2002</span
-                  >
-                  <p>
+                  > -->
+                  <!-- <p>
                     We are professional agency <br />
                     working with heart from melbourne
-                  </p>
+                  </p> -->
                   <div class="shaps bottom">
                     <div class="shap-left-top">
                       <svg
@@ -282,122 +376,6 @@
           <!-- ==================== End Intro ==================== -->
 
           <!-- ==================== Start Portfolio ==================== -->
-
-          <!-- <section class="works-dm section-padding">
-            <div class="container">
-              <div class="gallery row md-marg">
-                <div class="items col-lg-6 order-md-2">
-                  <div class="item">
-                    <div class="img">
-                      <img src="assets/imgs/works/2.jpg" alt="" />
-                      <div class="tags">
-                        <a href="#0">Development</a>
-                        <a href="#0">UI/UX</a>
-                        <a href="#0">illustration</a>
-                      </div>
-                    </div>
-                    <div class="cont mt-30">
-                      <div class="info sub-color mb-10">
-                        <span>2023</span>
-                        <span class="dot"></span>
-                        <span>UiThemez</span>
-                      </div>
-                      <h6>
-                        <a href="">Archin Architecture Studio</a>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="items col-lg-6 order-md-1">
-                  <div class="sec-head">
-                    <h6 class="sub-head mb-15">Featured Works</h6>
-                    <h2 class="fz-60">
-                      Take a look at <br />
-                      our projects
-                    </h2>
-                  </div>
-                </div>
-                <div class="items col-lg-6 order-md-2">
-                  <div class="item">
-                    <div class="img">
-                      <img src="assets/imgs/works/1.jpg" alt="" />
-                      <div class="tags">
-                        <a href="#0">Development</a>
-                        <a href="#0">UI/UX</a>
-                        <a href="#0">illustration</a>
-                      </div>
-                    </div>
-                    <div class="cont mt-30">
-                      <div class="info sub-color mb-10">
-                        <span>2023</span>
-                        <span class="dot"></span>
-                        <span>UiThemez</span>
-                      </div>
-                      <h6>
-                        <a href="">Unerio Residential Complex Landing page</a>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="items col-lg-6 order-md-2">
-                  <div class="item">
-                    <div class="img">
-                      <img src="assets/imgs/works/3.jpg" alt="" />
-                      <div class="tags">
-                        <a href="#0">Development</a>
-                        <a href="#0">UI/UX</a>
-                        <a href="#0">illustration</a>
-                      </div>
-                    </div>
-                    <div class="cont mt-30">
-                      <div class="info sub-color mb-10">
-                        <span>2023</span>
-                        <span class="dot"></span>
-                        <span>UiThemez</span>
-                      </div>
-                      <h6>
-                        <a href=""
-                          >Jorger Clarkson - Architect Personal Portfolio</a
-                        >
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="items col-lg-6 order-md-2">
-                  <div class="item">
-                    <div class="img">
-                      <img src="assets/imgs/works/4.jpg" alt="" />
-                      <div class="tags">
-                        <a href="#0">Development</a>
-                        <a href="#0">UI/UX</a>
-                        <a href="#0">illustration</a>
-                      </div>
-                    </div>
-                    <div class="cont mt-30">
-                      <div class="info sub-color mb-10">
-                        <span>2023</span>
-                        <span class="dot"></span>
-                        <span>UiThemez</span>
-                      </div>
-                      <h6>
-                        <a href="">Newz - Magazine Site</a>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="items col-lg-6 order-md-2">
-                  <a href="" class="crv-butn mt-100">
-                    <div class="d-flex">
-                      <span class="text">View all works</span>
-                      <span class="icon">
-                        <img src="" alt="" />
-                      </span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section> -->
 
           <!-- ==================== End Portfolio ==================== -->
 
@@ -496,316 +474,317 @@
             <img src="assets/imgs/img-s-75.webp" />
           </section>
           <!-- ==================== Start Services ==================== -->
-
-          <section class="work-card">
-            <div class="container section-padding bord-thin-top-light">
-              <div class="sec-head mb-100">
-                <div class="row">
-                  <div class="col-lg-5">
-                    <h6 class="sub-head">Featured Works</h6>
+          <div class="contact">
+            <section class="work-card">
+              <div class="container section-padding bord-thin-top-light">
+                <div class="sec-head mb-100 sm-100">
+                  <div class="row">
+                    <div class="col-lg-5 col-sm-5">
+                      <h6 class="sub-head">Featured Works</h6>
+                    </div>
+                    <div class="col-lg-7 col-sm-7">
+                      <h4>
+                        Our user-centered design encourages
+                        <span class="sub-color inline"
+                          >productivity &amp; boosts revenue.</span
+                        >
+                      </h4>
+                    </div>
                   </div>
-                  <div class="col-lg-7">
-                    <h4>
-                      Our user-centered design encourages
-                      <span class="sub-color inline"
-                        >productivity &amp; boosts revenue.</span
-                      >
-                    </h4>
+                </div>
+                <div class="cards">
+                  <div
+                    class="pin-spacer"
+                    style="
+                      order: 0;
+                      place-self: auto;
+                      grid-area: auto;
+                      z-index: auto;
+                      float: none;
+                      flex-shrink: 1;
+                      display: block;
+                      margin: 0px 0px 30px;
+                      inset: auto;
+                      position: relative;
+                      flex-basis: auto;
+                      overflow: visible;
+                      box-sizing: border-box;
+                      width: 1256px;
+                      height: 517px;
+                      padding: 0px;
+                    "
+                  >
+                    <div
+                      class="card-item"
+                      style="
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform-origin: 628px 258.283px 0px;
+                        transform: translate(0px);
+                        inset: 0px auto auto 0px;
+                        margin: 0px;
+                        max-width: 1256px;
+                        width: 1256px;
+                        max-height: 516.567px;
+                        height: 516.567px;
+                        padding: 0px;
+                      "
+                    >
+                      <div class="row">
+                        <div class="col-lg-5 col-sm-5">
+                          <div class="cont md-mb50">
+                            <div>
+                              <h5>
+                                <a href="../inner_pages/project-details.html"
+                                  >Unerio Residential <br />
+                                  Complex Landing page</a
+                                >
+                              </h5>
+                            </div>
+                            <div>
+                              <p>
+                                This paragraph is short description to describe
+                                about this project, you can use it to improve
+                                SEO or highlight some key result of this project
+                              </p>
+                              <div class="mt-40">
+                                <a href="#0" class="tag">Development</a>
+                                <a href="#0" class="tag">UI/UX</a>
+                                <a href="#0" class="tag">illustration</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-7 col-sm-7">
+                          <div class="img">
+                            <img src="assets/imgs/works/1.jpg" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <div
+                    class="pin-spacer"
+                    style="
+                      order: 0;
+                      place-self: auto;
+                      grid-area: auto;
+                      z-index: auto;
+                      float: none;
+                      flex-shrink: 1;
+                      display: block;
+                      margin: 0px 0px 30px;
+                      inset: auto;
+                      position: relative;
+                      flex-basis: auto;
+                      overflow: visible;
+                      box-sizing: border-box;
+                      width: 1256px;
+                      height: 517px;
+                      padding: 0px;
+                    "
+                  >
+                    <div
+                      class="card-item"
+                      style="
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform-origin: 628px 258.283px 0px;
+                        transform: translate(0px);
+                        inset: 0px auto auto 0px;
+                        margin: 0px;
+                        max-width: 1256px;
+                        width: 1256px;
+                        max-height: 516.567px;
+                        height: 516.567px;
+                        padding: 0px;
+                      "
+                    >
+                      <div class="row">
+                        <div class="col-lg-5 col-sm-5">
+                          <div class="cont md-mb50">
+                            <div>
+                              <h5>
+                                <a href="../inner_pages/project-details.html"
+                                  >Archin Architecture <br />
+                                  Studio</a
+                                >
+                              </h5>
+                            </div>
+                            <div>
+                              <p>
+                                This paragraph is short description to describe
+                                about this project, you can use it to improve
+                                SEO or highlight some key result of this project
+                              </p>
+                              <div class="mt-40">
+                                <a href="#0" class="tag">Mobile Responsive</a>
+                                <a href="#0" class="tag">UX Design</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-7 col-sm-7">
+                          <div class="img">
+                            <img src="assets/imgs/works/2.jpg" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="pin-spacer"
+                    style="
+                      order: 0;
+                      place-self: auto;
+                      grid-area: auto;
+                      z-index: auto;
+                      float: none;
+                      flex-shrink: 1;
+                      display: block;
+                      margin: 0px 0px 30px;
+                      inset: auto;
+                      position: relative;
+                      flex-basis: auto;
+                      overflow: visible;
+                      box-sizing: border-box;
+                      width: 1256px;
+                      height: 517px;
+                      padding: 0px;
+                    "
+                  >
+                    <div
+                      class="card-item"
+                      style="
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform-origin: 628px 258.283px 0px;
+                        transform: translate(0px);
+                        inset: 0px auto auto 0px;
+                        margin: 0px;
+                        max-width: 1256px;
+                        width: 1256px;
+                        max-height: 516.567px;
+                        height: 516.567px;
+                        padding: 0px;
+                      "
+                    >
+                      <div class="row">
+                        <div class="col-lg-5 col-sm-5">
+                          <div class="cont md-mb50">
+                            <div>
+                              <h5>
+                                <a href="../inner_pages/project-details.html"
+                                  >Jorger Clarkson - Architect <br />
+                                  Personal Portfolio</a
+                                >
+                              </h5>
+                            </div>
+                            <div>
+                              <p>
+                                This paragraph is short description to describe
+                                about this project, you can use it to improve
+                                SEO or highlight some key result of this project
+                              </p>
+                              <div class="mt-40">
+                                <a href="#0" class="tag">UI/UX</a>
+                                <a href="#0" class="tag">Webflow</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-7 col-sm-7">
+                          <div class="img">
+                            <img src="assets/imgs/works/3.jpg" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="pin-spacer"
+                    style="
+                      order: 0;
+                      place-self: auto;
+                      grid-area: auto;
+                      z-index: auto;
+                      float: none;
+                      flex-shrink: 1;
+                      display: block;
+                      margin: 0px 0px 30px;
+                      inset: auto;
+                      position: relative;
+                      flex-basis: auto;
+                      overflow: visible;
+                      box-sizing: border-box;
+                      width: 1256px;
+                      height: 517px;
+                      padding: 0px;
+                    "
+                  >
+                    <div
+                      class="card-item"
+                      style="
+                        translate: none;
+                        rotate: none;
+                        scale: none;
+                        transform-origin: 628px 258.283px 0px;
+                        transform: translate(0px);
+                        inset: 0px auto auto 0px;
+                        margin: 0px;
+                        max-width: 1256px;
+                        width: 1256px;
+                        max-height: 516.567px;
+                        height: 516.567px;
+                        padding: 0px;
+                      "
+                    >
+                      <div class="row">
+                        <div class="col-lg-5 col-sm-5">
+                          <div class="cont md-mb50">
+                            <div>
+                              <h5>
+                                <a href="../inner_pages/project-details.html"
+                                  >DS Freelance Developer</a
+                                >
+                              </h5>
+                            </div>
+                            <div>
+                              <p>
+                                This paragraph is short description to describe
+                                about this project, you can use it to improve
+                                SEO or highlight some key result of this project
+                              </p>
+                              <div class="mt-40">
+                                <a href="#0" class="tag">Development</a>
+                                <a href="#0" class="tag">UI/UX</a>
+                                <a href="#0" class="tag">illustration</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-7 col-sm-7">
+                          <div class="img">
+                            <img src="assets/imgs/works/4.jpg" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-80">
+                  <a
+                    href="../inner_pages/portfolio-cards.html"
+                    class="butn butn-md butn-bord butn-rounded"
+                  >
+                  </a>
                 </div>
               </div>
-              <div class="cards">
-                <div
-                  class="pin-spacer"
-                  style="
-                    order: 0;
-                    place-self: auto;
-                    grid-area: auto;
-                    z-index: auto;
-                    float: none;
-                    flex-shrink: 1;
-                    display: block;
-                    margin: 0px 0px 30px;
-                    inset: auto;
-                    position: relative;
-                    flex-basis: auto;
-                    overflow: visible;
-                    box-sizing: border-box;
-                    width: 1256px;
-                    height: 517px;
-                    padding: 0px;
-                  "
-                >
-                  <div
-                    class="card-item"
-                    style="
-                      translate: none;
-                      rotate: none;
-                      scale: none;
-                      transform-origin: 628px 258.283px 0px;
-                      transform: translate(0px);
-                      inset: 0px auto auto 0px;
-                      margin: 0px;
-                      max-width: 1256px;
-                      width: 1256px;
-                      max-height: 516.567px;
-                      height: 516.567px;
-                      padding: 0px;
-                    "
-                  >
-                    <div class="row">
-                      <div class="col-lg-5">
-                        <div class="cont md-mb50">
-                          <div>
-                            <h5>
-                              <a href="../inner_pages/project-details.html"
-                                >Unerio Residential <br />
-                                Complex Landing page</a
-                              >
-                            </h5>
-                          </div>
-                          <div>
-                            <p>
-                              This paragraph is short description to describe
-                              about this project, you can use it to improve SEO
-                              or highlight some key result of this project
-                            </p>
-                            <div class="mt-40">
-                              <a href="#0" class="tag">Development</a>
-                              <a href="#0" class="tag">UI/UX</a>
-                              <a href="#0" class="tag">illustration</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-7">
-                        <div class="img">
-                          <img src="assets/imgs/works/1.jpg" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="pin-spacer"
-                  style="
-                    order: 0;
-                    place-self: auto;
-                    grid-area: auto;
-                    z-index: auto;
-                    float: none;
-                    flex-shrink: 1;
-                    display: block;
-                    margin: 0px 0px 30px;
-                    inset: auto;
-                    position: relative;
-                    flex-basis: auto;
-                    overflow: visible;
-                    box-sizing: border-box;
-                    width: 1256px;
-                    height: 517px;
-                    padding: 0px;
-                  "
-                >
-                  <div
-                    class="card-item"
-                    style="
-                      translate: none;
-                      rotate: none;
-                      scale: none;
-                      transform-origin: 628px 258.283px 0px;
-                      transform: translate(0px);
-                      inset: 0px auto auto 0px;
-                      margin: 0px;
-                      max-width: 1256px;
-                      width: 1256px;
-                      max-height: 516.567px;
-                      height: 516.567px;
-                      padding: 0px;
-                    "
-                  >
-                    <div class="row">
-                      <div class="col-lg-5">
-                        <div class="cont md-mb50">
-                          <div>
-                            <h5>
-                              <a href="../inner_pages/project-details.html"
-                                >Archin Architecture <br />
-                                Studio</a
-                              >
-                            </h5>
-                          </div>
-                          <div>
-                            <p>
-                              This paragraph is short description to describe
-                              about this project, you can use it to improve SEO
-                              or highlight some key result of this project
-                            </p>
-                            <div class="mt-40">
-                              <a href="#0" class="tag">Mobile Responsive</a>
-                              <a href="#0" class="tag">UX Design</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-7">
-                        <div class="img">
-                          <img src="assets/imgs/works/2.jpg" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="pin-spacer"
-                  style="
-                    order: 0;
-                    place-self: auto;
-                    grid-area: auto;
-                    z-index: auto;
-                    float: none;
-                    flex-shrink: 1;
-                    display: block;
-                    margin: 0px 0px 30px;
-                    inset: auto;
-                    position: relative;
-                    flex-basis: auto;
-                    overflow: visible;
-                    box-sizing: border-box;
-                    width: 1256px;
-                    height: 517px;
-                    padding: 0px;
-                  "
-                >
-                  <div
-                    class="card-item"
-                    style="
-                      translate: none;
-                      rotate: none;
-                      scale: none;
-                      transform-origin: 628px 258.283px 0px;
-                      transform: translate(0px);
-                      inset: 0px auto auto 0px;
-                      margin: 0px;
-                      max-width: 1256px;
-                      width: 1256px;
-                      max-height: 516.567px;
-                      height: 516.567px;
-                      padding: 0px;
-                    "
-                  >
-                    <div class="row">
-                      <div class="col-lg-5">
-                        <div class="cont md-mb50">
-                          <div>
-                            <h5>
-                              <a href="../inner_pages/project-details.html"
-                                >Jorger Clarkson - Architect <br />
-                                Personal Portfolio</a
-                              >
-                            </h5>
-                          </div>
-                          <div>
-                            <p>
-                              This paragraph is short description to describe
-                              about this project, you can use it to improve SEO
-                              or highlight some key result of this project
-                            </p>
-                            <div class="mt-40">
-                              <a href="#0" class="tag">UI/UX</a>
-                              <a href="#0" class="tag">Webflow</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-7">
-                        <div class="img">
-                          <img src="assets/imgs/works/3.jpg" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="pin-spacer"
-                  style="
-                    order: 0;
-                    place-self: auto;
-                    grid-area: auto;
-                    z-index: auto;
-                    float: none;
-                    flex-shrink: 1;
-                    display: block;
-                    margin: 0px 0px 30px;
-                    inset: auto;
-                    position: relative;
-                    flex-basis: auto;
-                    overflow: visible;
-                    box-sizing: border-box;
-                    width: 1256px;
-                    height: 517px;
-                    padding: 0px;
-                  "
-                >
-                  <div
-                    class="card-item"
-                    style="
-                      translate: none;
-                      rotate: none;
-                      scale: none;
-                      transform-origin: 628px 258.283px 0px;
-                      transform: translate(0px);
-                      inset: 0px auto auto 0px;
-                      margin: 0px;
-                      max-width: 1256px;
-                      width: 1256px;
-                      max-height: 516.567px;
-                      height: 516.567px;
-                      padding: 0px;
-                    "
-                  >
-                    <div class="row">
-                      <div class="col-lg-5">
-                        <div class="cont md-mb50">
-                          <div>
-                            <h5>
-                              <a href="../inner_pages/project-details.html"
-                                >DS Freelance Developer</a
-                              >
-                            </h5>
-                          </div>
-                          <div>
-                            <p>
-                              This paragraph is short description to describe
-                              about this project, you can use it to improve SEO
-                              or highlight some key result of this project
-                            </p>
-                            <div class="mt-40">
-                              <a href="#0" class="tag">Development</a>
-                              <a href="#0" class="tag">UI/UX</a>
-                              <a href="#0" class="tag">illustration</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-7">
-                        <div class="img">
-                          <img src="assets/imgs/works/4.jpg" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="text-center mt-80">
-                <a
-                  href="../inner_pages/portfolio-cards.html"
-                  class="butn butn-md butn-bord butn-rounded"
-                >
-                </a>
-              </div>
-            </div>
-          </section>
+            </section>
+          </div>
 
           <!-- ==================== End Services ==================== -->
 
@@ -879,7 +858,7 @@
                 <div class="col-lg-5">
                   <a href="#" class="logo md-mb50">
                     <img src="assets/imgs/" alt="" />
-                    <h4>logo</h4>
+                    <!-- <h4>logo</h4> -->
                   </a>
                 </div>
                 <div class="col-lg-6">
